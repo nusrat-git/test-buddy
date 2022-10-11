@@ -15,8 +15,8 @@ const Questions = ({ questionData, totalMark}) => {
     }
 
     return (
-        <div className=' bg-teal-200 m-3 p-3 md:m-8 md:p-9 rounded-xl'>
-            <div className='flex-column md:flex items-center justify-center gap-4  mt-9'>
+        <div className=' bg-teal-200 m-3 p-3 md:p-9 rounded-xl'>
+            <div className='flex-column md:flex items-center justify-center gap-4 mt-9'>
                 <h1 className='text-xl md:text-2xl font-bold md:font-semibold'> {question}</h1>
                 <button className=' text-blue-500 hover:text-black' onClick={answer} ><EyeIcon className='h-6 w-6 mt-5 md:mt-0' /></button>
                 <ToastContainer />

@@ -9,7 +9,7 @@ const Quizes = () => {
     console.log(quizData.data);
     return (
         <div className=''>
-            <div className='p-5 m-4'>
+            <div className='p-5 mx-4 mt-12 mb-12 bg-cyan-300 rounded-lg'>
                 <h1 className='text-5xl font-bold my-9 p-7'>Test Of {name}</h1>
                 <p className='text-xl mb-3'>Total {total} questions</p>
             </div>
