@@ -19,7 +19,7 @@ const Subject = ({ subject}) => {
                         <button className='btn btn-secondary'>Start Playing</button>
                     </Link>
                 </div>
-            </div>
+            </div>  
             <div>
 
             </div>
