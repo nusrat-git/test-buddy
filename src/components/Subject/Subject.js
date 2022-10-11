@@ -1,7 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import './Subject.css';
-
 
 const Subject = ({ subject }) => {
     const { id, logo, name, total } = subject;
