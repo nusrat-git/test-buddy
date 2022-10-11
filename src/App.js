@@ -24,10 +24,12 @@ function App() {
         },
         {
           path: '/analytics',
+          loader: ()=> fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Analytics></Analytics>
         },
         {
           path: '/blogs',
+          
           element: <Blogs></Blogs>
         },
         {

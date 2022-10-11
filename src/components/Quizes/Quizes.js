@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Questions from '../Questions/Questions';
 
 const Quizes = () => {
     const quizData = useLoaderData();
     const {id, name, total, questions } = quizData.data;
-
-    const [marks , setMarks] = useState(0);
-
 
     console.log(quizData.data);
     return (
