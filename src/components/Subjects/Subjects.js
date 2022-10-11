@@ -5,7 +5,7 @@ const Subjects = () => {
     const subjects = useLoaderData();
 
     return (
-        <div>
+        <div className=' sm:flex-column md:flex justify-center'>
             {
                 subjects.data.map(subject => <Subject
                     key={subject.id}
@@ -17,6 +17,5 @@ const Subjects = () => {
         </div>
     );
 };
-
 export default Subjects;
 

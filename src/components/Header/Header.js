@@ -11,7 +11,7 @@ const Header = () => {
         //         <button className='play-btn btn btn-success'>Let's Play</button>
         //     </div>
         // </div>
-        <div className='flex items-center justify-center my-4 bg-lime-100'>
+        <div className='md:flex flex-column p-6 items-center justify-center my-4 bg-lime-100'>
 
             <div>
                 <img src={header} alt="" />
