@@ -20,7 +20,6 @@ const Header = () => {
                 <h1 className='pb-2'>Test Your Ability</h1>
                 <h5 className='pb-2'>Play quizs </h5>
                 <h5 className='pb-3'>Improve your Knowledge with test buddy.</h5>
-                <button className='btn btn-success'>Let's Play</button>
             </div>
             
         </div>

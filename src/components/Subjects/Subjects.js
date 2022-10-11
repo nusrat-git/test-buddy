@@ -1,10 +1,9 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import {useLoaderData } from 'react-router-dom';
 import Subject from '../Subject/Subject';
 
 const Subjects = () => {
     const subjects = useLoaderData();
-    
+
     return (
         <div>
             {
@@ -12,9 +11,9 @@ const Subjects = () => {
                     key={subject.id}
                     subject={subject}
                 >
-
                 </Subject>)
             }
+
         </div>
     );
 };
