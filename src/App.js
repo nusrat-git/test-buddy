@@ -4,6 +4,7 @@ import Analytics from './components/Analytics/Analytics';
 import Blogs from './components/Blogs/Blogs';
 import Quizes from './components/Quizes/Quizes';
 import Subjects from './components/Subjects/Subjects';
+import Header from './components/Header/Header'
 import Main from './layouts/Main';
 
 function App() {
@@ -14,6 +15,10 @@ function App() {
       children: [
         {
           path: '/',
+          element: <Header></Header>
+        },
+        {
+          path: '/subject',
           loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
           element: <Subjects></Subjects>
         },
@@ -38,6 +43,7 @@ function App() {
         }
       ]
     }
+    
   ])
   return (
     <div className="App">
