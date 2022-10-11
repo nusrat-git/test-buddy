@@ -11,15 +11,15 @@ const Header = () => {
         //         <button className='play-btn btn btn-success'>Let's Play</button>
         //     </div>
         // </div>
-        <div className='header-container d-flex justify-content-center align-items-center m-5 '>
+        <div className='flex items-center justify-center my-4 bg-lime-100'>
 
             <div>
                 <img src={header} alt="" />
             </div>
             <div>
-                <h1 className='pb-2'>Test Your Ability</h1>
-                <h5 className='pb-2'>Play quizs </h5>
-                <h5 className='pb-3'>Improve your Knowledge with test buddy.</h5>
+                <h1 className=' text-3xl font-bold text-lime-700 mb-2'>Test Your Ability</h1>
+                <h5 className='text-2xl font-bold text-pink-400 mb-3'>Play quizs </h5>
+                <h5 className='text-xl font-bold text-purple-400'>Improve your Knowledge with test buddy.</h5>
             </div>
             
         </div>
