@@ -5,7 +5,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Options from '../Options/Options';
 
-const Questions = ({ questionData}) => {
+const Questions = ({ questionData, totalMark}) => {
     const { options, question, correctAnswer } = questionData;
 
     const answer = () => toast(`${correctAnswer}`);
