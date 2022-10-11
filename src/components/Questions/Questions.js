@@ -1,25 +1,31 @@
 import React from 'react';
 import { EyeIcon } from '@heroicons/react/24/solid'
 
-const Questions = ({ questionData }) => {
-    const { options, id, question, correctAnswer } = questionData;
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Options from '../Options/Options';
 
-    console.log(questionData);
+const Questions = ({ questionData}) => {
+    const { options, question, correctAnswer } = questionData;
+
+    const answer = () => toast(`${correctAnswer}`);
+
+    const givenAnswer = event => {
+        event.target.value === correctAnswer ? toast('your answer is right') : toast('your answer is wrong');
+    }
+
     return (
-        <div className=' bg-teal-200 m-8 p-9 rounded-xl'>
-            <div className='flex items-center justify-center gap-4  mt-9'>
-                <h1 className='text-2xl font-semibold'>{question}</h1>
-                <EyeIcon className="h-6 w-6 text-blue-500" />
+        <div className=' bg-teal-200 m-3 p-3 md:m-8 md:p-9 rounded-xl'>
+            <div className='flex-column md:flex items-center justify-center gap-4  mt-9'>
+                <h1 className='text-xl md:text-2xl font-bold md:font-semibold'> {question}</h1>
+                <button className=' text-blue-500 hover:text-black' onClick={answer} ><EyeIcon className='h-6 w-6 mt-5 md:mt-0' /></button>
+                <ToastContainer />
             </div>
-            <p className='grid md:grid-cols-2 p-7'>
+            <div className='grid md:grid-cols-2 md:p-7'>
                 {
-                    options.map(option => <div className='flex justify-center items-center'>
-                        <input type="radio" value="" name="default-radio" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"></input>
-                        <p className='p-7 text-xl'>{option}</p>
-
-                    </div>)
+                    options.map(option => <Options key={option} option={option} givenAnswer={givenAnswer}></Options>)
                 }
-            </p>
+            </div>
         </div>
     );
 };
