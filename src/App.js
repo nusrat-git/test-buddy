@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './App.css';
 import Analytics from './components/Analytics/Analytics';
 import Blogs from './components/Blogs/Blogs';
-import Subject from './components/Subject/Subject';
+import Subjects from './components/Subjects/Subjects';
 import Main from './layouts/Main';
 
 function App() {
@@ -10,10 +10,11 @@ function App() {
     {
       path: '/',
       element: <Main></Main>,
-      children:[
+      children: [
         {
           path: '/',
-          element: <Subject></Subject>
+          loader: () => fetch('https://openapi.programming-hero.com/api/quiz'),
+          element: <Subjects></Subjects>
         },
         {
           path: '/analytics',
@@ -21,7 +22,7 @@ function App() {
         },
         {
           path: '/blogs',
-          element: <Blogs></Blogs> 
+          element: <Blogs></Blogs>
         }
       ]
     }
