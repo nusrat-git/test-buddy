@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { Bar, CartesianGrid, ComposedChart, Legend, Line, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts';
+import { Bar, CartesianGrid, ComposedChart, Legend, Line, Tooltip, XAxis, YAxis } from 'recharts';
 
 const Analytics = () => {
     const quizQuestions = useLoaderData();
@@ -11,7 +11,6 @@ const Analytics = () => {
             <h1 className='text-4xl font-bold p-10 text-sky-800'>Chart analysis of total questions</h1>
 
             <div className='flex justify-center mt-6'>
-                {/* <ResponsiveContainer width='100%' height={400} > */}
 
                     <ComposedChart  width={360}
                         height={400}
@@ -28,8 +27,6 @@ const Analytics = () => {
                         <Line type="monotone" dataKey="total" stroke="#4C6793"></Line>
 
                     </ComposedChart>
-
-                {/* </ResponsiveContainer> */}
 
             </div>
 

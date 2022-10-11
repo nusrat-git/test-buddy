@@ -1,3 +1,38 @@
+##### Projects Information #####
+
+# Live Site Link 
+
+
+## Project Name 
+
+Test Buddy
+
+### Project Features
+
+# React Router
+
+This is a single page application created with react router . 
+
+## Responsiveness
+
+A tailwind css resoponsive website.
+
+### Toast
+
+Toast component used to alert.
+
+#### Charts
+
+Used recharts to show data analysis.
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
